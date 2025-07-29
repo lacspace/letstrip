@@ -5,6 +5,12 @@ import { motion } from 'framer-motion';
 import { MapPin, Star, Wifi, Car, Coffee, Waves, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { LucideIcon } from 'lucide-react';
+
+// Define the type for amenityIcons
+interface AmenityIcons {
+  [key: string]: LucideIcon;
+}
 
 const HotelsPage = () => {
   const [viewMode, setViewMode] = useState('grid');
@@ -56,7 +62,7 @@ const HotelsPage = () => {
     },
   ];
 
-  const amenityIcons = {
+  const amenityIcons: AmenityIcons = {
     'WiFi': Wifi,
     'Pool': Waves,
     'Spa': Coffee,
